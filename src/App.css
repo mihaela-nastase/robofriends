@@ -12,3 +12,11 @@ h1 {
   font-weight: 200;
   color: #0ccac4;
 }
+
+.header {
+  position: fixed;
+  z-index: 20;
+  background: linear-gradient(to left, rgba(7,27,82,1) 0%, rgba(0,128,128,1) 100%);
+  right: 0;
+  left: 0;
+}
