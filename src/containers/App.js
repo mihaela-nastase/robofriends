@@ -5,13 +5,10 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
+    state = {
       robots: [],
       searchfield: ''
     }
-  }
 
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
