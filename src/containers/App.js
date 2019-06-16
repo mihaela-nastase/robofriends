@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { setSearchField, requestRobots } from '../actions';
+
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import ErrorBoundary from '../components/ErrorBoundary';
+import Header from '../components/Header';
 import './App.css';
-
-import { setSearchField, requestRobots } from '../actions';
 
 const mapStateToProps = state => {
   return {
@@ -38,10 +39,10 @@ class App extends Component {
       <h1>Loading</h1> :
       (
         <div className='tc'>
-          <header className='header'>
-            <h1 className='f2'>RoboFriends</h1>
+          <div className='header'>
+            <Header />
             <SearchBox searchChange={onSearchChange}/>
-          </header>
+          </div>
           <ErrorBoundary>
             <CardList robots={filteredRobots}/>
           </ErrorBoundary>
